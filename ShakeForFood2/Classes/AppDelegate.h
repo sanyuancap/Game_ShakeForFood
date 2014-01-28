@@ -1,18 +1,10 @@
-//
-//  ShakeForFood2AppDelegate.h
-//  ShakeForFood2
-//
-//  Created by apple on 12-10-11.
-//  Copyright __MyCompanyName__ 2012年. All rights reserved.
-//
-
-#ifndef  _APP_DELEGATE_H_
-#define  _APP_DELEGATE_H_
+#ifndef __APP_DELEGATE_H__
+#define __APP_DELEGATE_H__
 
 #include "CCApplication.h"
 
 /**
-@brief    The cocos2d Application.
+@brief	The cocos2d Application.
 
 The reason for implement as private inheritance is to hide some interface call by CCDirector.
 */
@@ -22,9 +14,13 @@ public:
     AppDelegate();
     virtual ~AppDelegate();
 
+    /**
+    @brief	Implement for initialize OpenGL instance, set source path, etc...
+    */
+    virtual bool initInstance();
 
     /**
-    @brief    Implement CCDirector and CCScene init code here.
+    @brief	Implement CCDirector and CCScene init code here.
     @return true    Initialize success, app continue.
     @return false   Initialize failed, app terminate.
     */
@@ -43,5 +39,5 @@ public:
     virtual void applicationWillEnterForeground();
 };
 
-#endif // _APP_DELEGATE_H_
+#endif  // __APP_DELEGATE_H__
 
